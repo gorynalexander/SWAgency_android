@@ -1,8 +1,13 @@
-package com.sw.swagency;
+package com.sw.swagency_2;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,11 +17,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.sw.swagency_2.fragments.AboutUsFragment;
+import com.sw.swagency_2.fragments.OrderFragment;
+import com.sw.swagency_2.fragments.PortfolioFragment;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private DrawerLayout drawer;
+    private BottomNavigationView bottomNavigationView;
 
-    DrawerLayout drawer;
+    /* Fragments */
+    private FragmentManager fragmentManager;
+    private AboutUsFragment aboutUsFragment = new AboutUsFragment();
+    private OrderFragment orderFragment;
+    private PortfolioFragment portfolioFragment;
+    private Fragment fragment;
+    private ArrayList<Fragment> allFragments = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +45,52 @@ public class MainActivity extends AppCompatActivity
 
         initToolbar();
         initFAB();
+        initFragments();
+        initBottomNavView();
+    }
 
+    private void initBottomNavView() {
+        fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.add(R.id.container, aboutUsFragment);
+        transaction.commit();
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                switch (id){
+                    case R.id.action_about_us:
+                        fragment = new AboutUsFragment();
+                        break;
+                    case R.id.action_order:
+                        fragment = new OrderFragment();
+                        break;
+                    case R.id.action_portfolio:
+                        fragment = new PortfolioFragment();
+                        break;
+                }
+                final FragmentTransaction transaction = fragmentManager.beginTransaction();
+                        transaction.replace(R.id.container, fragment)
+                        .commit();
+                    
+                return true;
+            }
+        });
+    }
+
+    private void initFragments() {
+//        fragmentManager = getSupportFragmentManager();
+//        fragmentManager.beginTransaction()
+//                .add(R.id.container, aboutUsFragment)
+//                .add(R.id.container, orderFragment)
+//                .add(R.id.container, portfolioFragment)
+//                .commit();
+//        allFragments.addAll(Arrays.asList(
+//                aboutUsFragment,
+//                orderFragment,
+//                portfolioFragment
+//        ));
     }
 
     private void initFAB() {
@@ -54,7 +120,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -88,8 +154,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
+//        int id = item.getItemId();
+//
 //        if (id == R.id.nav_camera) {
 //            // Handle the camera action
 //        } else if (id == R.id.nav_gallery) {
@@ -104,7 +170,7 @@ public class MainActivity extends AppCompatActivity
 //
 //        }
 
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

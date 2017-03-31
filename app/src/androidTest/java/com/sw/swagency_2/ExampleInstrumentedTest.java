@@ -1,4 +1,4 @@
-package com.sw.swagency;
+package com.sw.swagency_2;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.sw.swagency", appContext.getPackageName());
+        assertEquals("com.sw.swagency_2", appContext.getPackageName());
     }
 }

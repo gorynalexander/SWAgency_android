@@ -4,27 +4,27 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_main"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_home_black_18dp"
             android:title="Главная" />
         <item
             android:id="@+id/nav_contacts"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_phone_black_18dp"
             android:title="Контакты" />
         <item
             android:id="@+id/nav_sites"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_web_black_18dp"
             android:title="Разработка сайтов" />
         <item
             android:id="@+id/nav_ppc"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_mouse_black_18dp"
             android:title="PPC" />
         <item
             android:id="@+id/nav_seo"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_developer_board_black_18dp"
             android:title="SEO" />
         <item
             android:id="@+id/nav_mobile"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_phone_android_black_18dp"
             android:title="Мобильные приложения" />
     </group>
 
@@ -33,11 +33,11 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="Рассказать друзьям" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="Написать нам" />
         </menu>
     </item>
 

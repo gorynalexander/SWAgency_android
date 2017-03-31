@@ -1,4 +1,4 @@
-package com.sw.swagency;
+package com.sw.swagency_2;
 
 import org.junit.Test;
 

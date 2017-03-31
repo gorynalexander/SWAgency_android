@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_about_us"
+        android:title="О нас"
+        android:icon="@drawable/ic_menu_camera" />
+    <item android:id="@+id/action_order"
+        android:title="Сделать заказ"
+        android:icon="@drawable/ic_menu_gallery" />
+    <item android:id="@+id/action_portfolio"
+        android:title="Портфолио"
+        android:icon="@drawable/ic_menu_manage" />
+</menu>
