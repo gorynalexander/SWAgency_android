@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_main"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Главная" />
+        <item
+            android:id="@+id/nav_contacts"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Контакты" />
+        <item
+            android:id="@+id/nav_sites"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Разработка сайтов" />
+        <item
+            android:id="@+id/nav_ppc"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="PPC" />
+        <item
+            android:id="@+id/nav_seo"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="SEO" />
+        <item
+            android:id="@+id/nav_mobile"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Мобильные приложения" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
