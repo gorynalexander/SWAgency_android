@@ -48,12 +48,7 @@ public class MainActivity extends AppCompatActivity
         initToolbar();
         initFAB();
         initBottomNavView();
-
-
-
     }
-
-
 
     private void initBottomNavView() {
         fragmentManager = getSupportFragmentManager();
