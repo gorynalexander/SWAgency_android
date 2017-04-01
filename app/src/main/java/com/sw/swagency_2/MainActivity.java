@@ -8,6 +8,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,11 +21,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.sw.swagency_2.adapters.ProsAdapter;
 import com.sw.swagency_2.fragments.AboutUsFragment;
 import com.sw.swagency_2.fragments.OrderFragment;
 import com.sw.swagency_2.fragments.PortfolioFragment;
+import com.sw.swagency_2.models.Advantage;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -33,10 +38,7 @@ public class MainActivity extends AppCompatActivity
     /* Fragments */
     private FragmentManager fragmentManager;
     private AboutUsFragment aboutUsFragment = new AboutUsFragment();
-    private OrderFragment orderFragment;
-    private PortfolioFragment portfolioFragment;
     private Fragment fragment;
-    private ArrayList<Fragment> allFragments = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +47,13 @@ public class MainActivity extends AppCompatActivity
 
         initToolbar();
         initFAB();
-        initFragments();
         initBottomNavView();
+
+
+
     }
+
+
 
     private void initBottomNavView() {
         fragmentManager = getSupportFragmentManager();
@@ -79,19 +85,6 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
-    private void initFragments() {
-//        fragmentManager = getSupportFragmentManager();
-//        fragmentManager.beginTransaction()
-//                .add(R.id.container, aboutUsFragment)
-//                .add(R.id.container, orderFragment)
-//                .add(R.id.container, portfolioFragment)
-//                .commit();
-//        allFragments.addAll(Arrays.asList(
-//                aboutUsFragment,
-//                orderFragment,
-//                portfolioFragment
-//        ));
-    }
 
     private void initFAB() {
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
