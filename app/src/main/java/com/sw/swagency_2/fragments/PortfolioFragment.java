@@ -41,8 +41,8 @@ public class PortfolioFragment extends Fragment {
         List<PortfolioItem> list = new ArrayList<>();
 //        list.add(new PortfolioItem("gazon.sadovnik.od.ua", "http://i.imgur.com/0s2wcXw.png"));
 //        list.add(new PortfolioItem("glafirasova.ae", "http://i.imgur.com/Jgv6xXs.png"));
-        list.add(new PortfolioItem("gazon.sadovnik.od.ua", "http://i.imgur.com/0s2wcXw.png"));
-        list.add(new PortfolioItem("glafirasova.ae", "http://i.imgur.com/Jgv6xXs.png"));
+        list.add(new PortfolioItem("gazon.sadovnik.od.ua", "http://i.imgur.com/0s2wcXw.png", "Рулоновые газоны", getString(R.string.gazon_desc)));
+        list.add(new PortfolioItem("glafirasova.ae", "http://i.imgur.com/Jgv6xXs.png", "GLAFIRASOVA", getString(R.string.glaf_desc)));
         return list;
     }
 }
