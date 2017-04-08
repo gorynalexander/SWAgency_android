@@ -43,10 +43,10 @@ public class AboutUsFragment extends Fragment {
 
     private List<Advantage> createPros() {
         List<Advantage> list = new ArrayList<>();
-        list.add(new Advantage("Уникальность", "http://i.imgur.com/8Z8ujh9.png"));
-        list.add(new Advantage("Опыт работы", "http://i.imgur.com/MD7cQN9.png"));
-        list.add(new Advantage("Уникальность", "http://i.imgur.com/8Z8ujh9.png"));
-        list.add(new Advantage("Опыт работы", "http://i.imgur.com/MD7cQN9.png"));
+        list.add(new Advantage("Уникальность", R.drawable.ynikal));
+        list.add(new Advantage("Опыт работы", R.drawable.opyt));
+        list.add(new Advantage("Репутация компании", R.drawable.reputac));
+        list.add(new Advantage("Комплексное обслуживание", R.drawable.komplex));
         return list;
     }
 

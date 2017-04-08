@@ -1,13 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="order"/>
+        android:autoLink="phone"
+        android:text="  +38(063)72  35 062"
+        android:id="@+id/tvPhone1"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:drawableStart="@drawable/ic_phone_android_black_18dp"
+        android:drawableLeft="@drawable/ic_phone_android_black_18dp"
+        android:layout_marginLeft="10dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="phone"
+        android:text="  +38(066)25 27 552"
+        android:id="@+id/tvPhone2"
+        android:layout_below="@id/tvPhone1"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:drawableStart="@drawable/ic_phone_android_black_18dp"
+        android:drawableLeft="@drawable/ic_phone_android_black_18dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="email"
+        android:text="  info@sw-agency.net"
+        android:id="@+id/tvEmail"
+        android:layout_below="@id/tvPhone2"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="15dp"
+        android:drawableStart="@drawable/ic_email_black_18dp"
+        android:drawableLeft="@drawable/ic_email_black_18dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="map"
+        android:text="  улица Большая Арнаутская 61, Одесса, Одесская   область, Украина"
+        android:id="@+id/tvAddress"
+        android:layout_below="@id/tvEmail"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="15dp"
+        android:drawableStart="@drawable/ic_location_on_black_18dp"
+        android:drawableLeft="@drawable/ic_location_on_black_18dp"
+        android:layout_marginLeft="10dp" />
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="wrap_content"
+            android:layout_height="500dp"
+            android:layout_below="@id/tvAddress"/>
+
 
 </RelativeLayout>

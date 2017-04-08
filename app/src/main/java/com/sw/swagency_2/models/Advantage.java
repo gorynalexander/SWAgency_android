@@ -6,9 +6,10 @@ package com.sw.swagency_2.models;
 
 public class Advantage {
     private String title;
-    private String img;
+    private int img;
 
-    public Advantage(String title, String img) {
+
+    public Advantage(String title, int   img) {
         this.title = title;
         this.img = img;
     }
@@ -17,7 +18,7 @@ public class Advantage {
         return title;
     }
 
-    public String getImg() {
+    public int getImg() {
         return img;
     }
 }
