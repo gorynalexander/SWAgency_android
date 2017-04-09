@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sw.swagency_2.OrderActivity"
+    android:id="@+id/formGroup">
+
+
+    <TextView
+        android:id="@+id/tvOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Заказ"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Ваше имя"
+        android:inputType="text"
+        android:layout_below="@+id/tvOrder"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Ваш e-mail"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/etName" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Ваш телефон"
+        android:inputType="phone"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@+id/etEmail"/>
+
+    <CheckBox
+        android:id="@+id/cbSite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:text="Создание сайта"
+        android:layout_marginBottom="15dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:id="@+id/cbSeo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEO оптимизация"
+        android:layout_alignBaseline="@+id/cbSite"
+        android:layout_alignBottom="@+id/cbSite"
+        android:layout_alignRight="@+id/cbApp"
+        android:layout_alignEnd="@+id/cbApp"
+        android:layout_alignLeft="@+id/cbApp"
+        android:layout_alignStart="@+id/cbApp" />
+
+    <CheckBox
+        android:id="@+id/cbApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Создание приложения"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/cbSeo"
+        android:layout_alignRight="@+id/editText4"
+        android:layout_alignEnd="@+id/editText4" />
+
+    <CheckBox
+        android:id="@+id/cbPpc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PPC реклама"
+        android:layout_alignBaseline="@+id/cbApp"
+        android:layout_alignBottom="@+id/cbApp"
+        android:layout_alignLeft="@+id/editText4"
+        android:layout_alignStart="@+id/editText4"
+        android:layout_alignRight="@+id/cbSite"
+        android:layout_alignEnd="@+id/cbSite" />
+
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cbApp"
+        android:layout_marginTop="15dp"
+        android:ems="50"
+        android:hint="Ваше сообщение"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="14dp"
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/tvOrder"
+        android:layout_alignEnd="@+id/tvOrder" />
+
+
+</RelativeLayout>
