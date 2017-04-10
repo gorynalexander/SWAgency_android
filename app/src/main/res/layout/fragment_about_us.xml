@@ -6,73 +6,78 @@
     android:orientation="vertical">
 
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardViewInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <RelativeLayout
+        <TextView
+            android:id="@+id/tvTitleAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SPARKWRITE"
+            android:textColor="@color/colorBlack"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_alignTop="@+id/ivLogo"
+            android:layout_toRightOf="@+id/ivLogo"
+            android:layout_toEndOf="@+id/ivLogo" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="new.sparkwrite.net"
+            android:layout_below="@id/tvTitleAbout"
+            android:layout_alignLeft="@+id/tvTitleAbout"
+            android:layout_alignStart="@+id/tvTitleAbout"
+            android:autoLink="web"/>
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvTextAbout"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/tvTextAbout"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="30dp"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+
+        <View
+            android:id="@+id/divider"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="1dp"
+            android:background="#d3d3d3"
+            android:layout_below="@id/ivLogo"
 
-            <!--<TextView-->
-                <!--android:id="@+id/tvTitleAbout"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_centerHorizontal="true"-->
-                <!--android:layout_marginTop="5dp"-->
-                <!--android:text="SW AGENCY"-->
-                <!--android:textColor="@color/colorBlack"-->
-                <!--android:textSize="20sp"-->
-                <!--android:textStyle="bold" />-->
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"/>
 
-            <!--android:layout_below="@+id/tvTitleAbout"-->
-            <TextView
-                android:id="@+id/tvTextAbout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginBottom="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:text="@string/sw_desc"
-                android:textColor="@color/colorBlack" />
-        </RelativeLayout>
-
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/cardViewInfo">
-
-        <RelativeLayout
+        <TextView
+            android:id="@+id/tvTextAbout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/sw_desc"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp" />
 
-            <TextView
-                android:id="@+id/tvProsAbout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Почему стоит работать с нами"
-                android:textAlignment="center"
-                android:textColor="@color/colorBlack"
-                android:textSize="20sp"
-                android:textStyle="bold" />
 
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rvPros"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvProsAbout"
-                android:layout_marginTop="15dp" />
-
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
+    </RelativeLayout>
 
 
 </RelativeLayout>
